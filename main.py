@@ -351,5 +351,7 @@ def update(year, filtered_countries, slum_click, urban_click, scatter_click, ts_
     return slum_fig, urban_fig, scatter_fig, ts_fig, status, filtered_countries, f'Data for {year}'
 
 
+server = app.server
+
 if __name__ == '__main__':
     app.run(debug=True, port=8050)
