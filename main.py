@@ -341,12 +341,12 @@ def update(year, filtered_countries, slum_click, urban_click, scatter_click, ts_
     ts_fig = make_timeseries(selected, filtered_countries)
 
     # Status text
-    year_text = f'Year: **{year}**'
+    year_text = f'Year: {year}'
     filter_text = f' | Filtered to {len(filtered_countries)} countries' if filtered_countries else ''
     if selected:
-        status = f'{year_text}{filter_text} | Viewing: **{selected}** — click any chart to change.'
+        status = f'{year_text}{filter_text} | Viewing: {selected} — click any chart to change.'
     else:
-        status = f'{year_text}{filter_text} | **Tip:** Click any bar or point to highlight a country.'
+        status = f'{year_text}{filter_text} | Tip: Click any bar or point to highlight a country.'
 
     return slum_fig, urban_fig, scatter_fig, ts_fig, status, filtered_countries, f'Data for {year}'
 
